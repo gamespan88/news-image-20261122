@@ -45,7 +45,7 @@ def draw_page():
     d.text(((W - dw) / 2, 32), date, font=f_date, fill=NAVY_DARK)
     y = 32 + f_date.size + 12
 
-    stand = ("186 drones over Ukraine in the night · COP31's deal names no fossil fuels · "
+    stand = ("186 drones over Ukraine in the night · COP31 collapses over fossil fuels · "
              "Iran's radar claim meets Bahrain's denial")
     f_st = italic(15)
     d.text(((W - tw(d, stand, f_st)) / 2, y), stand, font=f_st, fill=RED)

@@ -22,7 +22,7 @@ REGIONS = [
 
 TIMELINE = ("01:00 HK polls open  ·  03:00 COP31 objections close  ·  "
             "05:11 Hamas seeks talks  ·  05:30 Verstappen wins Vegas  ·  "
-            "06:00 COP31 approval due  ·  07:30 Approval slips again")
+            "06:00 Approval due  ·  Plenary rejects the text")
 
 HEROES = [
     {
@@ -37,13 +37,14 @@ HEROES = [
     },
     {
         "num": 2, "scene": "cop",
-        "banner": "COP31: FINAL TEXT", "banner2": "NO FOSSIL FUELS",
+        "banner": "COP31: COLLAPSE", "banner2": "TEXT REJECTED",
         "dateline": "ANTALYA, TÜRKIYE · CLIMATE", "chip": "REPORTED",
-        "headline": "Climate deal lands with no mention of fossil fuels",
-        "summary": ("The final text \u201crecalls\u201d the Dubai pact whole, keeps the "
-                    "55%-electricity-by-2035 goal, drops the $120bn adaptation target and "
-                    "is the first to admit 1.5\u00b0C will be overshot. (Reuters, BBC, "
-                    "The Guardian)"),
+        "headline": "COP31 collapses: final text rejected over fossil fuels",
+        "summary": ("After the longest overrun in COP history, the EU, UK and island "
+                    "states rejected the Antalya text on Sunday. It dropped every mention "
+                    "of fossil fuels and the $120bn adaptation target, kept a voluntary "
+                    "35%-electricity-by-2035 goal, and admitted 1.5\u00b0C will be "
+                    "overshot. (Reuters, AP, Le Monde)"),
     },
     {
         "num": 3, "scene": "bahrain",
