@@ -85,19 +85,29 @@ def block(d, x, y, text, font, fill, maxw, pitch, max_lines=None, align="left", 
     return y
 
 
-CHIP_COLORS = {"REPORTED": NAVY, "CLAIM": RED, "FORECAST": (46, 107, 48)}
+TEAL = (0, 105, 115)
+GREEN = (30, 120, 70)
+ORANGE = (198, 106, 26)
+PURPLE = (105, 60, 150)
+GOLD = (178, 132, 26)
+PLUM = (110, 25, 60)
+ACCENTS = [RED, (30, 100, 160), TEAL, GREEN, ORANGE, PURPLE, GOLD, PLUM]
+
+CHIP_COLORS = {"REPORTED": RED, "CLAIM": PLUM, "FORECAST": PURPLE,
+               "CONFIRMED": GREEN, "OFFICIAL": NAVY}
 
 
 def chip(d, x, y, label):
     f = sans_b(9)
-    w = tw(d, label, f) + 10
-    d.rectangle([x, y, x + w, y + 14], fill=CHIP_COLORS.get(label, NAVY))
-    d.text((x + 5, y + 2), label, font=f, fill=(255, 255, 255))
+    w = tw(d, label, f) + 12
+    d.rounded_rectangle([x, y, x + w, y + 14], radius=7,
+                        fill=CHIP_COLORS.get(label, NAVY))
+    d.text((x + 6, y + 2), label, font=f, fill=(255, 255, 255))
     return w
 
 
-def num_badge(d, x, y, num, r=10):
-    d.ellipse([x, y, x + 2 * r, y + 2 * r], fill=RED)
+def num_badge(d, x, y, num, r=10, color=None):
+    d.ellipse([x, y, x + 2 * r, y + 2 * r], fill=color or RED)
     f = sans_b(11 if num < 10 else 9)
     s = str(num)
     w = tw(d, s, f)
